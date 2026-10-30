@@ -2,14 +2,19 @@ on:
   workflow_call:
     inputs:
       TS_AUDIENCE:
+        type: string
         required: true
       TS_OAUTH_CLIENT_ID:
+        type: string
         required: true
       SERVER_HOSTNAME:
+        type: string
         required: true
       SERVER_USER:
+        type: string
         required: true
       SSH_SCRIPT:
+        type: string
         required: true
 
 jobs:
