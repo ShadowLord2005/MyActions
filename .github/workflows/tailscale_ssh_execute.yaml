@@ -28,6 +28,6 @@ jobs:
         tags: tag:cicd
         ping: ${{ secrets.SERVER_HOSTNAME }}
     - name: Execute SSH
-      run: ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOSTNAME }} 'bash -s' < ${{ inputs.SSH_SCRIPT }}
+      run: tailscale ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOSTNAME }} 'bash -s' < ${{ inputs.SSH_SCRIPT }}
 permissions:
   id-token: write
